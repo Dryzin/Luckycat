@@ -4,6 +4,12 @@ from tkinter import *
 
 root = Tk()
 
+bg = PhotoImage(file = "undo.png") 
+label1 = Label( root, image = bg) 
+label1.place(x = 0, y = 0) 
+
+root.geometry("700x1000")
+
 #criar os widgets
 
 bt1 = Button(root, text='Bt1')
@@ -22,4 +28,3 @@ bt4.grid(row=2, column=0, columnspan=3, sticky=NSEW)
 #executar a janela
 root.mainloop()
 
-tetstst
