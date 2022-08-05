@@ -4,7 +4,7 @@ from tkinter import *
 
 root = Tk()
 
-bg = PhotoImage(file = "undo.png") 
+bg = PhotoImage(file = "fundo.png") 
 label1 = Label( root, image = bg) 
 label1.place(x = 0, y = 0) 
 
