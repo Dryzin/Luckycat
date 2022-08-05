@@ -2,7 +2,7 @@ import mysql.connector
 from classe_aposta import *
 from classe_participantes import *
 
-class DBAgenda:
+class funcoes:
     def __init__(self):
         self.conexao = mysql.connector.connect(
         host='localhost',
