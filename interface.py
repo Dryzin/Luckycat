@@ -21,3 +21,5 @@ bt4.grid(row=2, column=0, columnspan=3, sticky=NSEW)
 
 #executar a janela
 root.mainloop()
+
+tetstst
