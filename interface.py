@@ -32,7 +32,7 @@ bt2 = Button(root, text='Ver Sorteio')
 bt3 = Button(root, text='Cadastrar Participantes')
 bt4 = Button(root, text='Finalizar Sorteio')
 
-
+#oil
 
 #organizar os widgets
 
