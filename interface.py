@@ -27,7 +27,7 @@ bt2 = Button(root, text='Bt2')
 bt3 = Button(root, text='Bt3')
 bt4 = Button(root, text='Bt4')
 
-bt1 = Button(root, text='Novo Sorteio')
+bt1 = Button(root, bg='red' ,image=bt, activebackground="red")
 bt2 = Button(root, text='Ver Sorteio')
 bt3 = Button(root, text='Cadastrar Participantes')
 bt4 = Button(root, text='Finalizar Sorteio')
