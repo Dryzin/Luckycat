@@ -7,8 +7,9 @@ root.title("密")
 
 
 bg = PhotoImage(file = "2.png") 
-label1 = Label( root, image = bg)
-label1.place(x = 0, y = 0) 
+fr1 = Frame( root)
+lb1 = Label(image=bg)
+lb1.place(x = 0, y = 0) 
 
 
 root.geometry("707x1000")
@@ -20,6 +21,7 @@ root.maxsize(707, 1000)
 
 #criar os widgets
 bt = PhotoImage(file = "bt.png") 
+
 
 
 bt1 = Button(root,bg='red',image=bt,activebackground="red")
