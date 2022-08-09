@@ -20,19 +20,16 @@ root.maxsize(707, 1000)
 
 
 #criar os widgets
-bt = PhotoImage(file = "bt.png") 
+criar = PhotoImage(file = "criar.png") 
+info = PhotoImage(file = "info.png")
+cadastro = PhotoImage(file = "cadastro.png")
+finalizar = PhotoImage(file = "finalizar.png")
 
 
-
-bt1 = Button(root,bg='red',image=bt,activebackground="red")
-bt2 = Button(root, text='Bt2')
-bt3 = Button(root, text='Bt3')
-bt4 = Button(root, text='Bt4')
-
-bt1 = Button(root, bg='red',image=bt, activebackground="red")
-bt2 = Button(root, text='Ver Sorteio')
-bt3 = Button(root, text='Cadastrar Participantes')
-bt4 = Button(root, text='Finalizar Sorteio')
+bt1 = Button(root, bg='red',image=criar, activebackground="red")
+bt2 = Button(root, text='Info', bg='red',image=info, activebackground="red")
+bt3 = Button(root, text='Cadastrar Participantes', bg='red',image=cadastro, activebackground="red")
+bt4 = Button(root, text='Finalizar Sorteio', bg='red',image=finalizar, activebackground="red")
 
 
 #organizar os widgets
