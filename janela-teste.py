@@ -5,8 +5,9 @@ from tkinter import *
 root = Tk()
 
 bg = PhotoImage(file = "4.png")
-label1 = Label( root, image = bg)
-label1.place(x = 0, y = 0)
+fr2 = Frame( root)
+lb1 = Label(image = bg)
+lb1.place(x = 0, y = 0)
 
 root.geometry("700x1000")
 root.minsize(707, 1000)
