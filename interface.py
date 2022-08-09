@@ -1,4 +1,5 @@
 from tkinter import *
+from janela_teste import *
 
 #criar janela
 
@@ -28,7 +29,7 @@ finalizar = PhotoImage(file = "finalizar.png")
 
 bt1 = Button(root, bg='red',image=criar, activebackground="red")
 bt2 = Button(root, text='Info', bg='red',image=info, activebackground="red")
-bt3 = Button(root, text='Cadastrar Participantes', bg='red',image=cadastro, activebackground="red")
+bt3 = Button(root, text='Cadastrar Participantes', bg='red',image=cadastro, activebackground="red", command=lambda: [teste, root.destroy()])
 bt4 = Button(root, text='Finalizar Sorteio', bg='red',image=finalizar, activebackground="red")
 
 
