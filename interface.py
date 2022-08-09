@@ -32,9 +32,8 @@ bt2 = Button(root, text='Ver Sorteio')
 bt3 = Button(root, text='Cadastrar Participantes')
 bt4 = Button(root, text='Finalizar Sorteio')
 
-#oil
 
-#organizar os widgetsa
+#organizar os widgets
 
 bt1.place(x= 180, y= 450)
 bt2.place(x= 280, y= 450)
