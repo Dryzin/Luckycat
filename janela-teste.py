@@ -4,13 +4,13 @@ from tkinter import *
 
 root = Tk()
 
-bg = PhotoImage(file = "fundo.png")
+bg = PhotoImage(file = "4.png")
 label1 = Label( root, image = bg)
 label1.place(x = 0, y = 0)
 
 root.geometry("700x1000")
-root.minsize(700, 1000)
-root.maxsize(700, 1000)
+root.minsize(707, 1000)
+root.maxsize(707, 1000)
 #geometria
 
 
@@ -28,14 +28,14 @@ bt1 = Button(root, text='Voltar')
 
 #organizar os widgets
 
-lb0.place(x= 180, y= 450)
-in0.place(x= 250, y= 450)
-lb1.place(x= 180, y= 550)
-in1.place(x= 250, y= 550)
-lb2.place(x= 180, y= 650)
-in2.place(x= 250, y= 650)
-bt0.place(x=180, y= 750)
-bt1.place(x=250, y=750)
+lb0.place(x= 90, y= 180)
+in0.place(x= 250, y= 180)
+lb1.place(x= 90, y= 230)
+in1.place(x= 250, y= 230)
+lb2.place(x= 90, y= 280)
+in2.place(x= 250, y= 280)
+bt0.place(x=350, y= 850)
+bt1.place(x=90, y=850)
 
 
 #executar a janela
