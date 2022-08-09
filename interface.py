@@ -3,31 +3,31 @@ from tkinter import *
 #criar janela
 
 root = Tk()
-root.title("密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密密")
+root.title("密")
 
 
-bg = PhotoImage(file = "fundo.png") 
+bg = PhotoImage(file = "2.png") 
 label1 = Label( root, image = bg)
 label1.place(x = 0, y = 0) 
 
 
-root.geometry("700x1000")
-root.minsize(700, 1000) 
-root.maxsize(700, 1000)
+root.geometry("707x1000")
+root.minsize(707, 1000) 
+root.maxsize(707, 1000)
 #geometria
 
 
 
 #criar os widgets
-bt = PhotoImage(file = "bt.png") 
+#bt = PhotoImage(file = "bt.png") 
 
 
-bt1 = Button(root,bg='red' ,image=bt, activebackground="red")
+bt1 = Button(root,bg='red' , activebackground="red")
 bt2 = Button(root, text='Bt2')
 bt3 = Button(root, text='Bt3')
 bt4 = Button(root, text='Bt4')
 
-bt1 = Button(root, bg='red' ,image=bt, activebackground="red")
+bt1 = Button(root, bg='red', activebackground="red")
 bt2 = Button(root, text='Ver Sorteio')
 bt3 = Button(root, text='Cadastrar Participantes')
 bt4 = Button(root, text='Finalizar Sorteio')
