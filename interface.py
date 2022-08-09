@@ -34,7 +34,7 @@ bt4 = Button(root, text='Finalizar Sorteio')
 
 
 
-#organizar os widgets
+#organizar os widgetsa
 
 bt1.place(x= 180, y= 450)
 bt2.place(x= 280, y= 450)
