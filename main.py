@@ -9,7 +9,7 @@ primary key (cpf)
 );
 create table tabelas(
 sequencia int(5),
-cpf1 varchar(17)
-foreign key (cpf) references apostador(cpf)
+cpf1 varchar(17),
+foreign key (cpf1) references apostador(cpf)
 );'''
 
