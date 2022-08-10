@@ -4,6 +4,8 @@ from funcoes import *
 
 #criar janela
 obj_funcoes=funcoes()
+
+
 root = Tk()
 root.title("密")
 root.geometry("707x1000")
@@ -61,7 +63,9 @@ in1 = Entry(fr2, text='')
 lb2 = Label(fr2, text='Telefone:')
 in2 = Entry(fr2, text='')
 bt0 = Button(fr2, text='Salvar', command=lambda: obj_funcoes.cadastrar_participante(in1.get(),in0.get(),in2.get()))
+
 bt1 = Button(fr2, text='Voltar', command=lambda:[fr2.grid_remove(), fr1.grid(row=2, column=0)])
+
 
 enS1 = Entry(fr2, text='', width=10, bg= "#d91a1a")
 
@@ -70,17 +74,36 @@ enS3 = Entry(fr2, text='', width=10, bg= "#d91a1a")
 enS4 = Entry(fr2, text='', width=10, bg= "#d91a1a")
 enS5 = Entry(fr2, text='', width=10, bg= "#d91a1a")
 
+def sv_jogo():
 
+    global jogo
+    
+    jogo = enS1.get()+enS2.get()+enS3.get()+enS4.get()+enS5.get()
 
+    '''jogo.append(enS1.get())
+    jogo.append(enS2.get())
+    jogo.append(enS3.get())'''
 
+    print (jogo)
+    return
+
+jogo = enS1.get()+enS2.get()+enS3.get()
+
+bt3 = Button(fr2, text='Jogar', command=lambda: [sv_jogo(), obj_funcoes.cadastrar_jogo(jogo)])
+
+#print (jogo)
 lb0.place(x= 90, y= 180)
 in0.place(x= 250, y= 180)
 lb1.place(x= 90, y= 230)
 in1.place(x= 250, y= 230)
 lb2.place(x= 90, y= 280)
 in2.place(x= 250, y= 280)
-bt0.place(x=350, y= 850)
+
+bt0.place(x=90, y= 450)
+
 bt1.place(x=90, y=850)
+
+bt3.place(x=140, y=850)
 
 enS1.place(x= 53, y= 725)
 enS2.place(x= 189, y= 725)
