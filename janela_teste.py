@@ -1,9 +1,9 @@
 
 
 from tkinter import *
-
+from funcoes import *
 #criar janela
-
+obj_funcoes=funcoes()
 root = Tk()
 
 bg = PhotoImage(file = "4.png")
@@ -30,7 +30,7 @@ lb1 = Label(root, text='CPF:')
 in1 = Entry(root, text='')
 lb2 = Label(root, text='Telefone:')
 in2 = Entry(root, text='')
-bt0 = Button(root, text='Salvar')
+bt0 = Button(root, text='Salvar', command=lambda: obj_funcoes.cadastrar_participante(in1.get(),in0.get(),in2.get()))
 bt1 = Button(root, text='Voltar')
 
 

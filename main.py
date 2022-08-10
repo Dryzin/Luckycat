@@ -1,3 +1,4 @@
+
 '''create database apostas;
 use database apostas;
 create table apostador(
@@ -11,3 +12,4 @@ sequencia int(5),
 cpf1 varchar(17)
 foreign key (cpf) references apostador(cpf)
 );'''
+
