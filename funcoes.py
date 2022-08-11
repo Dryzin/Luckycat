@@ -27,3 +27,16 @@ class funcoes:
                         f'("{obj_jogo.cpf1}", "{obj_jogo.sequencia}")'
             self.meu_cursor.execute(comando_sql)
             self.conexao.commit() 
+
+    def sortear_a (self):
+        global z,x
+        x = random.sample (range(1,30),5)
+        comando_sql = f'select sequencia from tabelas'
+        self.meu_cursor.execute(comando_sql)
+        z=self.meu_cursor.fetchall()
+        for i in range(len(z)):    
+            a=int(z[i][0])
+            b=x[0]
+        if a==b:
+            print('Você ganhou') 
+        else: print('Você perdeu')

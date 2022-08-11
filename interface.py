@@ -31,7 +31,7 @@ finalizar = PhotoImage(file = "finalizar.png")
 
 
 bt3 = Button(fr1, text='Cadastrar Participantes', bg='#d91a1a',image=cadastro, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 420)
-bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr3.grid(row=2, column=0)]).place(x= 220, y= 470)
+bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [ obj_funcoes.sortear_a (), fr1.grid_remove(), fr3.grid(row=2, column=0)]).place(x= 220, y= 470)
 fr1.grid()
 
 
@@ -107,13 +107,15 @@ enS4.place(x= 457, y= 615)
 enS5.place(x= 593, y= 615)
 
 
+'''def resultado():
+    lb8['text'] ='''
 
 #Frame 3
 bg3 = PhotoImage(file = "3.png")
 lb1 = Label(fr3, image = bg3).grid(row=0 , column=0, sticky=W)
 bt1 = Button(fr3, text='Voltar', bg= "#d91a1a",activebackground="#d91a1a",image=voltar, command=lambda:[fr3.grid_remove(), fr1.grid(row=2, column=0)]).place(x=80, y=850)
-lb8 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
-lb9 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
+lb8 = Label(fr3, text= '' ,bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
+lb9 = Label(fr3, text='to',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
 
 
 root.mainloop()
