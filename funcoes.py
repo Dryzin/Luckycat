@@ -20,10 +20,10 @@ class funcoes:
         self.meu_cursor.execute(comando_sql)
         self.conexao.commit()
 
-    def cadastrar_jogo(self, sequencia):
-            obj_jogo = Info_apostas (sequencia)
+    def cadastrar_jogo(self, cpf1, sequencia):
+            obj_jogo = Info_apostas (cpf1, sequencia)
             comando_sql = f'insert into tabelas ' \
-                        f'(sequencia) value ' \
-                        f'("{obj_jogo.sequencia}")'
+                        f'(cpf1,sequencia) value ' \
+                        f'("{obj_jogo.cpf1}", "{obj_jogo.sequencia}")'
             self.meu_cursor.execute(comando_sql)
             self.conexao.commit() 
