@@ -87,8 +87,6 @@ def sv_jogo():
     print (jogo)
     return
 
-jogo = enS1.get()+enS2.get()+enS3.get()
-
 bt3 = Button(fr2, text='Jogar', command=lambda: [sv_jogo(), obj_funcoes.cadastrar_jogo(jogo)])
 
 #print (jogo)
