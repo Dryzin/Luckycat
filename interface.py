@@ -14,10 +14,11 @@ root.maxsize(707, 1000)
 
 fr1 = Frame()
 fr2 = Frame()
+fr3 = Frame()
 
 
-bg = PhotoImage(file = "2.png") 
-lb1 = Label(fr1, image=bg).grid(row=0 , column=0, sticky=W)
+bg1 = PhotoImage(file = "1.png") 
+lb1 = Label(fr1, image=bg1).grid(row=0 , column=0, sticky=W)
 
 #geometria
 
@@ -30,14 +31,14 @@ finalizar = PhotoImage(file = "finalizar.png")
 
 
 bt3 = Button(fr1, text='Cadastrar Participantes', bg='#d91a1a',image=cadastro, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 420)
-bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a").place(x= 220, y= 470)
+bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr3.grid(row=2, column=0)]).place(x= 220, y= 470)
 fr1.grid()
 
 
 ####FR2####
 
 
-bg2 = PhotoImage(file = "4.png")
+bg2 = PhotoImage(file = "2.png")
 lb2 = Label(fr2, image = bg2).grid(row=0 , column=0, sticky=W)
 
 
@@ -104,5 +105,16 @@ enS2.place(x= 189, y= 615)
 enS3.place(x= 325, y= 615)
 enS4.place(x= 457, y= 615)
 enS5.place(x= 593, y= 615)
+
+
+
+#Frame 3
+bg3 = PhotoImage(file = "3.png")
+lb1 = Label(fr3, image = bg3).grid(row=0 , column=0, sticky=W)
+bt1 = Button(fr3, text='Voltar', bg= "#d91a1a",activebackground="#d91a1a",image=voltar, command=lambda:[fr3.grid_remove(), fr1.grid(row=2, column=0)]).place(x=80, y=850)
+lb8 = Label(fr3, text='12,1,4,42,53',bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
+lb9 = Label(fr3, text='GERALDO',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
+
+
 root.mainloop()
 #from janela_teste import 1*
