@@ -1,5 +1,4 @@
-
-'''create database apostas;
+create database apostas;
 use apostas;
 
 create table apostador(
@@ -16,5 +15,4 @@ foreign key (cpf1) references apostador(cpf)
 
 select * from apostador;
 
-select * from tabelas;'''
-
+select * from tabelas;
