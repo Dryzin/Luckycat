@@ -83,7 +83,7 @@ def sv_jogo():
     print (jogo)
     return
 
-bt3 = Button(fr2, text='Jogar', command=lambda: [sv_jogo(), obj_funcoes.cadastrar_jogo(in1.get(), jogo)])
+bt3 = Button(fr2, text='Jogar', bg= "#d91a1a",activebackground="#d91a1a",image=jogar, command=lambda: [sv_jogo(), obj_funcoes.cadastrar_jogo(in1.get(), jogo)])
 
 #print (jogo)
 
