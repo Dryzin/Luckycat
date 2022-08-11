@@ -29,14 +29,34 @@ class funcoes:
             self.conexao.commit() 
 
     def sortear_a (self):
-        global z,x
+        global a, b, g
         x = random.sample (range(1,30),5)
-        comando_sql = f'select sequencia from tabelas'
+
+        b = str(x[0]) + str(x[1]) + str(x[2])+ str(x[3])+ str(x[4])
+        b = '1'
+        int(b)
+
+        comando_sql = f'select sequencia from tabelas where sequencia = {b}'
         self.meu_cursor.execute(comando_sql)
         z=self.meu_cursor.fetchall()
-        for i in range(len(z)):    
-            a=int(z[i][0])
-            b=x[0]
-        if a==b:
-            print('Você ganhou') 
-        else: print('Você perdeu')
+
+        if z == []:
+            print("Perdeu")
+
+        else:
+            comando_sql = f'select cpf1 from tabelas where sequencia = {b}'
+            self.meu_cursor.execute(comando_sql)
+            g=self.meu_cursor.fetchall()
+            print("Ganhou")
+            print(g)
+
+
+
+'''        for i in range(len(z)):    
+            a=int(z[i][0])'''
+'''
+            if a==b:
+                print(a)
+            else: 
+                print(a)
+                print(b)'''
