@@ -24,16 +24,14 @@ lb1 = Label(fr1, image=bg).grid(row=0 , column=0, sticky=W)
 #fr1.grid(row=1, column=0, sticky=NSEW)
 
 #criar os widgets
-criar = PhotoImage(file = "criar.png") 
 info = PhotoImage(file = "info.png")
 cadastro = PhotoImage(file = "cadastro.png")
 finalizar = PhotoImage(file = "finalizar.png")
 
 
-bt1 = Button(fr1, bg='red',image=criar, activebackground="red").place( x= 220, y= 420)
-bt2 = Button(fr1, text='Info', bg='red',image=info, activebackground="red").place(x= 220, y= 470)
-bt3 = Button(fr1, text='Cadastrar Participantes', bg='red',image=cadastro, activebackground="red", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 520)
-bt4 = Button(fr1, text='Finalizar Sorteio', bg='red',image=finalizar, activebackground="red").place(x= 220, y= 570)
+bt2 = Button(fr1, text='Info', bg='#d91a1a',image=info, activebackground="#d91a1a").place(x= 220, y= 470)
+bt3 = Button(fr1, text='Cadastrar Participantes', bg='#d91a1a',image=cadastro, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 520)
+bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a").place(x= 220, y= 570)
 fr1.grid()
 
 
@@ -45,10 +43,7 @@ lb2 = Label(fr2, image = bg2).grid(row=0 , column=0, sticky=W)
 
 
 #criar os widgets
-nome = PhotoImage(file = "criar.png") 
-CPF = PhotoImage(file = "info.png")
-Telefone = PhotoImage(file = "cadastro.png")
-Salvar = PhotoImage(file = "finalizar.png")
+Salvar = PhotoImage(file = "salvar.png")
 
 
 # função teste
@@ -56,13 +51,12 @@ Salvar = PhotoImage(file = "finalizar.png")
 #criar os widgets
 
 
-
+lb0 = Label(fr2, text='Nome:')
 in0 = Entry(fr2, text='')
-
+lb1 = Label(fr2, text='CPF:')
 in1 = Entry(fr2, text='')
-
+lb2 = Label(fr2, text='Telefone:')
 in2 = Entry(fr2, text='')
-
 bt0 = Button(fr2, text='Salvar', command=lambda: obj_funcoes.cadastrar_participante(in1.get(),in0.get(),in2.get()))
 
 bt1 = Button(fr2, text='Voltar', command=lambda:[fr2.grid_remove(), fr1.grid(row=2, column=0)])
@@ -91,24 +85,24 @@ def sv_jogo():
 bt3 = Button(fr2, text='Jogar', command=lambda: [sv_jogo(), obj_funcoes.cadastrar_jogo(jogo)])
 
 #print (jogo)
+lb0.place(x= 90, y= 180)
+in0.place(x= 250, y= 180)
+lb1.place(x= 90, y= 230)
+in1.place(x= 250, y= 230)
+lb2.place(x= 90, y= 280)
+in2.place(x= 250, y= 280)
 
-in0.place(x= 250, y= 90)
+bt0.place(x=90, y= 450)
 
-in1.place(x= 250, y= 170)
+bt1.place(x=90, y=850)
 
-in2.place(x= 315, y= 250)
+bt3.place(x=140, y=850)
 
-bt0.place(x=80, y= 350)
-
-bt1.place(x=80, y=850)
-
-bt3.place(x=130, y=850)
-
-enS1.place(x= 53, y= 615)
-enS2.place(x= 189, y= 615)
-enS3.place(x= 325, y= 615)
-enS4.place(x= 457, y= 615)
-enS5.place(x= 593, y= 615)
+enS1.place(x= 53, y= 725)
+enS2.place(x= 189, y= 725)
+enS3.place(x= 325, y= 725)
+enS4.place(x= 457, y= 725)
+enS5.place(x= 593, y= 725)
 
 root.mainloop()
-#from janela_teste import *
+#from janela_teste import 1*
