@@ -112,8 +112,8 @@ enS5.place(x= 593, y= 615)
 bg3 = PhotoImage(file = "3.png")
 lb1 = Label(fr3, image = bg3).grid(row=0 , column=0, sticky=W)
 bt1 = Button(fr3, text='Voltar', bg= "#d91a1a",activebackground="#d91a1a",image=voltar, command=lambda:[fr3.grid_remove(), fr1.grid(row=2, column=0)]).place(x=80, y=850)
-lb8 = Label(fr3, text='12,1,4,42,53',bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
-lb9 = Label(fr3, text='GERALDO',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
+lb8 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
+lb9 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
 
 
 root.mainloop()
