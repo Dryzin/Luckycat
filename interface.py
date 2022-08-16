@@ -5,9 +5,6 @@ from funcoes import *
 #criar janela
 obj_funcoes=funcoes()
 
-'''def resultado():
-    global g
-    lb8['text'] = g'''
 
 root = Tk()
 root.title("密")
@@ -18,6 +15,12 @@ root.maxsize(707, 1000)
 fr1 = Frame()
 fr2 = Frame()
 fr3 = Frame()
+
+def dosomething():
+    #global b
+    #print(b)
+    #print(type(obj_funcoes.x))
+    lb8["text"] = obj_funcoes.x
 
 
 bg1 = PhotoImage(file = "1.png") 
@@ -34,10 +37,9 @@ finalizar = PhotoImage(file = "finalizar.png")
 
 
 bt3 = Button(fr1, text='Cadastrar Participantes', bg='#d91a1a',image=cadastro, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 420)
-bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [obj_funcoes.sortear_a (), fr1.grid_remove(), fr3.grid(row=2, column=0)]).place(x= 220, y= 470)
+bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [obj_funcoes.sortear_a(),fr1.grid_remove(),fr3.grid(row=2, column=0),dosomething()]).place(x= 220, y= 470)
 fr1.grid()
 
-#resultado() chamar no botão
 
 ####FR2####
 
@@ -111,12 +113,15 @@ enS4.place(x= 457, y= 615)
 enS5.place(x= 593, y= 615)
 
 
+
 #Frame 3
 bg3 = PhotoImage(file = "3.png")
 lb1 = Label(fr3, image = bg3).grid(row=0 , column=0, sticky=W)
 bt1 = Button(fr3, text='Voltar', bg= "#d91a1a",activebackground="#d91a1a",image=voltar, command=lambda:[fr3.grid_remove(), fr1.grid(row=2, column=0)]).place(x=80, y=850)
-lb8 = Label(fr3 ,text= '', bg= "#d91a1a",font='Sawarabi 25').place(x= 250, y= 480)
-lb9 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25').place(x= 263, y= 680)
+lb8 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25')
+lb8.place(x= 250, y= 480)
+lb9 = Label(fr3, text='',bg= "#d91a1a",font='Sawarabi 25')
+lb9.place(x= 263, y= 680)
 
 
 root.mainloop()

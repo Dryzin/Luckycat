@@ -11,6 +11,7 @@ class funcoes:
         password='q1w2e3',
         database='apostas')
         self.meu_cursor = self.conexao.cursor()
+        self.x = self.sortear_a()
 
     def cadastrar_participante(self, cpf, nome, telefone):
         obj_apostador = Info_participantes (cpf, nome, telefone)
@@ -34,7 +35,8 @@ class funcoes:
 
         b = str(x[0]) + str(x[1]) + str(x[2])+ str(x[3])+ str(x[4])
         b = '1'
-        int(b)
+        str(b)
+        
 
         comando_sql = f'select sequencia from tabelas where sequencia = {b}'
         self.meu_cursor.execute(comando_sql)
@@ -42,6 +44,7 @@ class funcoes:
 
         if z == []:
             print("Perdeu")
+            return b, "nenhum ganhador"
 
         else:
             comando_sql = f'select cpf1 from tabelas where sequencia = {b}'
@@ -49,8 +52,10 @@ class funcoes:
             g=self.meu_cursor.fetchall()
             print("Ganhou")
             print(g)
+            return g, b, "ganhou"
+        
 
-
+#####
 
 '''        for i in range(len(z)):    
             a=int(z[i][0])'''
