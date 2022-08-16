@@ -30,11 +30,24 @@ class funcoes:
             self.meu_cursor.execute(comando_sql)
             self.conexao.commit() 
 
+    def apagar(self):
+        comando_sql = f'TRUNCATE TABLE tabelas;'
+        self.meu_cursor.execute(comando_sql)
+        self.meu_cursor.fetchall()
+        print("limpo")
+
+    def apagar2(self):
+        comando_sql = f'Delete from apostador;'
+        self.meu_cursor.execute(comando_sql)
+        self.meu_cursor.fetchall()
+        print("limpo")
+
     def sortear_a (self):
         global b, g
         x = random.sample (range(1,30),5)
 
         b = str(x[0]) + str(x[1]) + str(x[2])+ str(x[3])+ str(x[4])
+        b = '1'
         str(b)
         
 

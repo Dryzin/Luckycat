@@ -34,10 +34,12 @@ lb1 = Label(fr1, image=bg1).grid(row=0 , column=0, sticky=W)
 
 cadastro = PhotoImage(file = "cadastro.png")
 finalizar = PhotoImage(file = "finalizar.png")
+reiniciar = PhotoImage(file = "reiniciar.png")
 
 
 bt3 = Button(fr1, text='Cadastrar Participantes', bg='#d91a1a',image=cadastro, activebackground="#d91a1a", command=lambda: [fr1.grid_remove(), fr2.grid(row=2, column=0)]).place(x= 220, y= 420)
-bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [obj_funcoes.sortear_a(),fr1.grid_remove(),fr3.grid(row=2, column=0),dosomething()]).place(x= 220, y= 470)
+bt5 = Button(fr1, text='Reiniciar', bg='#d91a1a',image=reiniciar, activebackground="#d91a1a", command=lambda:[ obj_funcoes.apagar(), obj_funcoes.apagar2()]).place(x=220, y=470)
+bt4 = Button(fr1, text='Finalizar Sorteio', bg='#d91a1a',image=finalizar, activebackground="#d91a1a", command=lambda: [obj_funcoes.sortear_a(),fr1.grid_remove(),fr3.grid(row=2, column=0),dosomething()]).place(x= 220, y= 520)
 fr1.grid()
 
 
@@ -105,6 +107,7 @@ bt0.place(x=80, y= 350)
 bt1.place(x=80, y=850)
 
 bt3.place(x=211, y=850)
+
 
 enS1.place(x= 53, y= 615)
 enS2.place(x= 189, y= 615)
