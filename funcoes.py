@@ -35,7 +35,6 @@ class funcoes:
         x = random.sample (range(1,30),5)
 
         b = str(x[0]) + str(x[1]) + str(x[2])+ str(x[3])+ str(x[4])
-        b = '2'
         str(b)
         
 
@@ -64,7 +63,7 @@ class funcoes:
             return "nenhum ganhador"
 
         else:
-            comando_sql = f'select cpf1 from tabelas where sequencia = {b}'
+            comando_sql = f'select nome from apostador where cpf = (select cpf1 from tabelas where sequencia = {b})'
             self.meu_cursor.execute(comando_sql)
             g=self.meu_cursor.fetchall()
             print("Ganhou")
