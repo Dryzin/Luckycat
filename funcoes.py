@@ -12,6 +12,7 @@ class funcoes:
         database='apostas')
         self.meu_cursor = self.conexao.cursor()
         self.x = self.sortear_a()
+        self.y = self.sortear_a2()
 
     def cadastrar_participante(self, cpf, nome, telefone):
         obj_apostador = Info_participantes (cpf, nome, telefone)
@@ -30,11 +31,11 @@ class funcoes:
             self.conexao.commit() 
 
     def sortear_a (self):
-        global a, b, g
+        global b, g
         x = random.sample (range(1,30),5)
 
         b = str(x[0]) + str(x[1]) + str(x[2])+ str(x[3])+ str(x[4])
-        b = '1'
+        b = '2'
         str(b)
         
 
@@ -43,8 +44,7 @@ class funcoes:
         z=self.meu_cursor.fetchall()
 
         if z == []:
-            print("Perdeu")
-            return b, "nenhum ganhador"
+            return b
 
         else:
             comando_sql = f'select cpf1 from tabelas where sequencia = {b}'
@@ -52,8 +52,24 @@ class funcoes:
             g=self.meu_cursor.fetchall()
             print("Ganhou")
             print(g)
-            return g, b, "ganhou"
+            return  b
         
+    def sortear_a2 (self):
+
+        comando_sql = f'select sequencia from tabelas where sequencia = {b}'
+        self.meu_cursor.execute(comando_sql)
+        z=self.meu_cursor.fetchall()
+
+        if z == []:
+            return "nenhum ganhador"
+
+        else:
+            comando_sql = f'select cpf1 from tabelas where sequencia = {b}'
+            self.meu_cursor.execute(comando_sql)
+            g=self.meu_cursor.fetchall()
+            print("Ganhou")
+            print(g)
+            return g
 
 #####
 
